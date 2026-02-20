@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamiya Collection - Trendy Kids Fashion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <h1>🎀 Zamiya Collection</h1>
+                    </div>
+                    
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#shop" class="nav-link">Shop</a></li>
+                        <li><a href="#categories" class="nav-link">Categories</a></li>
+                        <li><a href="#new-arrivals" class="nav-link">New Arrivals</a></li>
+                        <li><a href="#offers" class="nav-link">Offers</a></li>
+                        <li><a href="#about" class="nav-link">About Us</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                    
+                    <div class="header-actions">
+                        <div class="search-bar">
+                            <input type="text" placeholder="Search products..." id="searchInput">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Trendy & Cute Kids Fashion</h2>
+            <p>Discover adorable and comfortable clothing for your little ones</p>
+            <button class="btn btn-primary" onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})">Shop Now</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1503454537688-e6694e7d4d00?w=600&h=400&fit=crop" alt="Kids Fashion">
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1541692031658-a865f1f98a99?w=300&h=250&fit=crop" alt="Baby Wear">
+                    </div>
+                    <h3>Baby Wear</h3>
+                    <p>Soft & comfortable for babies</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1519457031057-cd4628902d4a?w=300&h=250&fit=crop" alt="Boys Wear">
+                    </div>
+                    <h3>Boys Wear</h3>
+                    <p>Trendy styles for boys</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1470272325128-fee4df7b9e00?w=300&h=250&fit=crop" alt="Girls Wear">
+                    </div>
+                    <h3>Girls Wear</h3>
+                    <p>Cute & colorful dresses</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1515193719033-cfad2e38def8?w=300&h=250&fit=crop" alt="Party Wear">
+                    </div>
+                    <h3>Party Wear</h3>
+                    <p>Special occasion outfits</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=300&h=250&fit=crop" alt="Winter Collection">
+                    </div>
+                    <h3>Winter Collection</h3>
+                    <p>Warm & cozy winter wear</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products" id="shop">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1519457031057-cd4628902d4a?w=250&h=300&fit=crop" alt="Product 1">
+                        <span class="badge">New</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Colorful T-Shirt</h3>
+                        <p class="product-description">Soft cotton kids t-shirt</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">₹299</span>
+                            <button class="btn btn-add-cart" onclick="addToCart('Colorful T-Shirt', 299)">
+                                <i class="fas fa-shopping-cart"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1515193719033-cfad2e38def8?w=250&h=300&fit=crop" alt="Product 2">
+                        <span class="badge sale">Sale</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Party Princess Dress</h3>
+                        <p class="product-description">Beautiful party dress for girls</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">₹599 <span class="original-price">₹899</span></span>
+                            <button class="btn btn-add-cart" onclick="addToCart('Party Princess Dress', 599)">
+                                <i class="fas fa-shopping-cart"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1541692031658-a865f1f98a99?w=250&h=300&fit=crop" alt="Product 3">
+                        <span class="badge">New</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Baby Romper</h3>
+                        <p class="product-description">Comfortable cotton romper</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">₹349</span>
+                            <button class="btn btn-add-cart" onclick="addToCart('Baby Romper', 349)">
+                                <i class="fas fa-shopping-cart"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1470272325128-fee4df7b9e00?w=250&h=300&fit=crop" alt="Product 4">
+                        <span class="badge sale">Sale</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Winter Jacket Set</h3>
+                        <p class="product-description">Warm winter collection outfit</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">₹799 <span class="original-price">₹1199</span></span>
+                            <button class="btn btn-add-cart" onclick="addToCart('Winter Jacket Set', 799)">
+                                <i class="fas fa-shopping-cart"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1503454537688-e6694e7d4d00?w=250&h=300&fit=crop" alt="Product 5">
+                        <span class="badge">New</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Casual Shorts & Tee</h3>
+                        <p class="product-description">Perfect for daily wear</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">₹449</span>
+                            <button class="btn btn-add-cart" onclick="addToCart('Casual Shorts & Tee', 449)">
+                                <i class="fas fa-shopping-cart"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=250&h=300&fit=crop" alt="Product 6">
+                        <span class="badge sale">Sale</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Sweater Combo</h3>
+                        <p class="product-description">Cozy knitted sweater set</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">₹649 <span class="original-price">₹999</span></span>
+                            <button class="btn btn-add-cart" onclick="addToCart('Sweater Combo', 649)">
+                                <i class="fas fa-shopping-cart"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="new-arrivals" id="new-arrivals">
+        <div class="container">
+            <h2 class="section-title">New Arrivals</h2>
+            <div class="arrivals-grid">
+                <div class="arrival-card">
+                    <div class="arrival-image">
+                        <img src="https://images.unsplash.com/photo-1515193719033-cfad2e38def8?w=300&h=350&fit=crop" alt="New Arrival 1">
+                    </div>
+                    <h3>Trendy Jumpsuit</h3>
+                    <p>₹549</p>
+                    <button class="btn btn-secondary" onclick="addToCart('Trendy Jumpsuit', 549)">View Details</button>
+                </div>
+
+                <div class="arrival-card">
+                    <div class="arrival-image">
+                        <img src="https://images.unsplash.com/photo-1541692031658-a865f1f98a99?w=300&h=350&fit=crop" alt="New Arrival 2">
+                    </div>
+                    <h3>Cute Dungarees</h3>
+                    <p>₹449</p>
+                    <button class="btn btn-secondary" onclick="addToCart('Cute Dungarees', 449)">View Details</button>
+                </div>
+
+                <div class="arrival-card">
+                    <div class="arrival-image">
+                        <img src="https://images.unsplash.com/photo-1519457031057-cd4628902d4a?w=300&h=350&fit=crop" alt="New Arrival 3">
+                    </div>
+                    <h3>Cargo Pants</h3>
+                    <p>₹399</p>
+                    <button class="btn btn-secondary" onclick="addToCart('Cargo Pants', 399)">View Details</button>
+                </div>
+
+                <div class="arrival-card">
+                    <div class="arrival-image">
+                        <img src="https://images.unsplash.com/photo-1470272325128-fee4df7b9e00?w=300&h=350&fit=crop" alt="New Arrival 4">
+                    </div>
+                    <h3>Floral Dress</h3>
+                    <p>₹599</p>
+                    <button class="btn btn-secondary" onclick="addToCart('Floral Dress', 599)">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers/Sale Banner -->
+    <section class="offers" id="offers">
+        <div class="container">
+            <div class="offer-banner">
+                <h2>🎉 Special Offers & Discounts 🎉</h2>
+                <p>Get up to 50% OFF on selected items</p>
+                <div class="offer-details">
+                    <div class="offer-card">
+                        <h3>50% OFF</h3>
+                        <p>Winter Collection</p>
+                    </div>
+                    <div class="offer-card">
+                        <h3>Buy 2 Get 1</h3>
+                        <p>T-Shirts & Tops</p>
+                    </div>
+                    <div class="offer-card">
+                        <h3>₹99 FLAT</h3>
+                        <p>Selected Items</p>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-large">Shop Sale Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose Zamiya Collection?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Quality Fabric</h3>
+                    <p>Premium soft and comfortable fabrics for your child's delicate skin</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3>Affordable Price</h3>
+                    <p>Best prices without compromising on quality and design</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <h3>Latest Fashion</h3>
+                    <p>Trendy and stylish designs that keep your kids looking cute</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick and reliable shipping across India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Amazing quality and designs! My daughter loves her new dresses from Zamiya Collection."</p>
+                    <h4>Priya Sharma</h4>
+                    <p class="location">Delhi, India</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Great collection and very reasonable prices. The delivery was super fast!"</p>
+                    <h4>Rahul Verma</h4>
+                    <p class="location">Mumbai, India</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"Perfect for kids! Comfort and style together. Definitely recommending to all moms."</p>
+                    <h4>Anjali Patel</h4>
+                    <p class="location">Bangalore, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Contact Details</h3>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>337, Hakeem Mateen Road<br>Major Ganj, Sultanpur<br>Uttar Pradesh 228001</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+919161007123">+91-9161007123</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@zamiyacollection.com">info@zamiyacollection.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h4>Follow Us</h4>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form" onsubmit="handleContactForm(event)">
+                    <h3>Send us a Message</h3>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#about">Our Story</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#new-arrivals">New Arrivals</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Baby Wear</a></li>
+                        <li><a href="#">Boys Wear</a></li>
+                        <li><a href="#">Girls Wear</a></li>
+                        <li><a href="#">Party Wear</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for exclusive offers and updates</p>
+                    <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Zamiya Collection. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
